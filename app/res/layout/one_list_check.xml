@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pocket"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ListView
+        android:id="@+id/productListBill"
+        android:layout_width="176dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:stretchMode="columnWidth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBill"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/allBillTax"
+        android:layout_width="170dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:text="Bill:"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFriend" />
+
+    <EditText
+        android:id="@+id/editBill"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allBillTax" />
+
+    <Button
+
+        android:id="@+id/buttonPlusBill"
+        android:layout_width="39dp"
+        android:layout_height="35dp"
+        android:text="+"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/editBill"
+        app:layout_constraintTop_toBottomOf="@+id/allBillTax" />
+
+    <ListView
+        android:id="@+id/productListCash"
+        android:layout_width="176dp"
+        android:layout_height="185dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toEndOf="@+id/productListBill"
+        app:layout_constraintTop_toBottomOf="@+id/editCash"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/allCashTax"
+        android:layout_width="179dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:text="Cash:"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/allBillTax"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFriend" />
+
+    <EditText
+        android:id="@+id/editCash"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlusBill"
+        app:layout_constraintTop_toBottomOf="@+id/allCashTax" />
+
+    <Button
+        android:id="@+id/buttonPlusCash"
+        android:layout_width="41dp"
+        android:layout_height="35dp"
+        android:text="+"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/editCash"
+        app:layout_constraintTop_toBottomOf="@+id/allCashTax" />
+
+    <TextView
+        android:id="@+id/textViewComment"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_background_selected2"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textViewFriend"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFriend"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/tab_background_selected"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonEditName"
+        android:layout_width="95dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="9dp"
+        android:text="comment"
+        android:textSize="9dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewFriend"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

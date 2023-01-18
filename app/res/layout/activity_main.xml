@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_container_view"
+    android:background="@drawable/gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="370dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="3pt"
+        android:animateLayoutChanges="false"
+        android:layout_weight="90"
+        android:background="@color/tab_background_unselected"
+        android:textSize="13sp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNewFriend"
+        app:tabBackground="@drawable/tab_layout_bg"
+        app:tabIndicator="@color/tab_background_unselected"
+        app:tabIndicatorColor="@color/black" />
+
+    <FrameLayout
+        android:id="@+id/simpleFrameLayout"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        android:layout_weight="90"
+        android:background="@drawable/round_bottom_only"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="324dp"
+        android:layout_height="25dp"
+        android:max="200"
+        android:min="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/gradient_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseTax" />
+
+    <TextView
+        android:id="@+id/textSeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="100 %"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chooseTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Choose the tax rate:"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabTextColor="@color/white" />
+
+    <Button
+        android:id="@+id/buttonNewFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add new friend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <Button
+        android:id="@+id/buttonDeleteFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="delete friend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ListView
+        android:id="@+id/listViewNames"
+        android:layout_width="370dp"
+        android:layout_height="152dp"
+        android:background="@color/tab_background_unselected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/logoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="created by: Pix.hunter"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewNames" />
+
+    <TextView
+        android:id="@+id/wellcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Welcome to friend bills helper"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="370dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpleFrameLayout">
+
+        <TextView
+            android:id="@+id/friendsName"
+            android:layout_width="74dp"
+            android:layout_height="21dp"
+
+            android:layout_marginTop="0dp"
+            android:background="@drawable/round_left_only"
+            android:text="   FRIENDS:"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/simpleFrameLayout" />
+
+        <TextView
+            android:id="@+id/bills"
+            android:layout_width="70dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/tab_background_selected"
+            android:text="BILLS:"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/friendsName"
+            app:layout_constraintTop_toBottomOf="@+id/simpleFrameLayout" />
+
+        <TextView
+            android:id="@+id/cashNeed"
+            android:layout_width="140dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/tab_background_selected"
+            android:text="CASH NEEDED:"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/bills"
+            app:layout_constraintTop_toBottomOf="@+id/simpleFrameLayout" />
+
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/round_rigth_only"
+            android:text="CHANGE:"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cashNeed"
+            app:layout_constraintTop_toBottomOf="@+id/simpleFrameLayout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="370dp"
+        android:layout_height="21dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/friendsNameView"
+            android:layout_width="74dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/tab_background_selected_a"
+            android:text="   TOTAL:"
+             />
+
+        <TextView
+            android:id="@+id/billsView"
+            android:layout_width="70dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/tab_background_selected_a"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/cashNeedView"
+            android:layout_width="140dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/tab_background_selected_a"
+            android:text=""
+            />
+
+        <TextView
+            android:id="@+id/changeView"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/tab_background_selected_a"
+            android:text="0"
+
+            />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/infoButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_ico_round"
+        android:text=" "
+        app:layout_constraintStart_toEndOf="@+id/wellcome"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
