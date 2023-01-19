@@ -31,7 +31,15 @@ App in Google Play:
  *                    |       |
  *                  Bill    Cash
  ```
-
+ 
+ ## Database shcema
+ 
+```
+         *  TABLES - no foreign keys
+         *  ALL_NAMES_TABLE     (ALL_NAMES | ALL_NEW_NAMES )
+         *  ALL_BILLS_TABLE     (ALL_NAMES | ALL_BILLS     )
+         *  ALL_CASHES_TABLE    (ALL_NAMES | ALL_CASHES    | ALL_COUNTS)
+ ```
 
 <br>The hurdest part was to reliase algoritm of choice of optimal algorithm to find cashes to have minimal change for each bills
 
